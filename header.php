@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="lg:text-base" style="--bg:#faf8f1">
 <head>
+    <?php
+        $title = get_bloginfo('title');
+
+        $post_title = get_the_title();
+
+        $title = is_single() ? get_the_title() . ' - ' . $title : $title;
+    ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <title><?php echo get_bloginfo('title'); ?></title>
+    <title><?php echo $title ?></title>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <meta name="theme-color" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,9 +17,10 @@
     <meta name="author" content="<?php echo get_bloginfo('author'); ?>" />
     <meta name="keywords" content="<?php echo get_bloginfo('keywords'); ?>" />
     <?php global $THEME_VERSION; ?>
-    <?php wp_enqueue_style( 'style', get_stylesheet_uri(), array(), $THEME_VERSION, 'all'); ?>
-    <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
-    <?php wp_head(); ?>
+    <?php wp_enqueue_style('style', get_stylesheet_uri(), array(), $THEME_VERSION, 'all'); ?>
+    <?php wp_enqueue_style('paper',  get_template_directory_uri() . '/assets/css/paper.css', array(), $THEME_VERSION, 'all'); ?>
+    <?php is_single() ? wp_enqueue_style('atom-one-dark-reasonable',  get_template_directory_uri() . '/assets/css/atom-one-dark-reasonable.min.css', array(), $THEME_VERSION, 'all') : ''; ?>
+    <?php echo is_single() ? '<script src="' . get_template_directory_uri() . '/assets/js/highlight.min.js?ver=' . $THEME_VERSION . '" defer onload="hljs.highlightAll()"></script>' : '' ?>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script>
       tailwind.config = {
@@ -148,6 +156,7 @@
             background-position: 100% !important;
         }
     </style>
+    <?php wp_head(); ?>
 </head>
 
 <body class="text-black duration-200 ease-out dark:text-white">
