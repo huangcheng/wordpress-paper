@@ -55,7 +55,7 @@ function paper_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('profile_description', array(
-        'label' => __('Profile Image'),
+        'label' => __('Profile Description'),
         'section' => 'header_section',
         'type' => 'text',
     ));
