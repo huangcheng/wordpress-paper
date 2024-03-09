@@ -9,5 +9,17 @@
     <a class="link" href="https://github.com/huangcheng/wordpress-paper" rel="noopener" target="_blank">✎ Paper</a>
 </footer>
 
+<style>
+    @media screen {
+        html, body {
+            height: <?php echo 'calc(100%'. (is_admin_bar_showing() ? ' - 32px' : ' ') .');'; ?>;
+        }
+    }
+    @media screen and ( max-width: 782px ) {
+        html, body {
+            height: <?php echo 'calc(100%' . (is_admin_bar_showing() ? ' - 46px' : ' ') .');'; ?>;
+        }
+    }
+</style>
 </body>
 </html>

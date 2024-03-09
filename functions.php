@@ -1,4 +1,7 @@
 <?php
+
+$theme_ver = wp_get_theme( '' )[ 'Version' ];
+
 function register_menu()
 {
     register_nav_menu('primary', __('Primary Menu'));
