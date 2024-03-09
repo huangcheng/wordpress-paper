@@ -51,21 +51,21 @@
     ?>
     <?php if (!empty($prev_post) || !empty($next_post)) : ?>
         <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
-            <? if (!empty($next_post)) : ?>
+            <?php if (!empty($next_post)) : ?>
                 <a
                     class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
                     href="<?php echo get_permalink( $next_post->ID ); ?>"
                 >
                     <span class="mr-1.5">←</span><span><?php echo $next_post->post_title; ?></span>
                 </a>
-            <? endif; ?>
-            <? if (!empty($prev_post)) : ?>
+            <?php endif; ?>
+            <?php if (!empty($prev_post)) : ?>
                 <a
                     class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
                     href="<?php echo get_permalink( $prev_post->ID ); ?>"
                 >
                     <span><?php echo $prev_post->post_title; ?></span><span class="ml-1.5">→</span></a>
-            <? endif; ?>
+            <?php endif; ?>
         </nav>
     <?php endif; ?>
 </main>

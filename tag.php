@@ -9,7 +9,7 @@ $tag_id = get_query_var('tag_id');
 
 $args = array('posts_per_page' => $posts_per_page, 'paged' => $paged, 'tag_id' => $tag_id);
 
-if (is_admin() && is_user_logged_in()) {
+if (is_user_logged_in()) {
     $args['post_status'] = array('publish', 'private');
 } else {
     $args['post_status'] = 'publish';
