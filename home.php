@@ -8,6 +8,12 @@
 
     $args = array('posts_per_page' => $posts_per_page, 'paged' => $paged);
 
+    if (is_admin() && is_user_logged_in()) {
+        $args['post_status'] = array('publish', 'private');
+    } else {
+        $args['post_status'] = 'publish';
+    }
+
     $posts = get_posts($args);
 
     $profile_image = get_theme_mod('profile_image');
