@@ -15,11 +15,11 @@
 
     <nav class="mt-16 flex">
         <?php if (get_previous_posts_link()) : ?>
-            <a class="btn" href="<?php previous_posts(); ?>"><?php echo __('Prev Page', 'paper'); ?></a>
+            <a class="btn" href="<?php previous_posts(); ?>">← <?php echo __('Prev Page', 'paper'); ?></a>
         <?php endif; ?>
 
         <?php if (get_next_posts_link()) : ?>
-            <a class="btn ml-auto" href="<?php next_posts(); ?>"><?php echo __('Next Page', 'paper'); ?></a>
+            <a class="btn ml-auto" href="<?php next_posts(); ?>"><?php echo __('Next Page', 'paper'); ?> →</a>
         <?php endif; ?>
     </nav>
 </main>
