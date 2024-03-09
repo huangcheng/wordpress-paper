@@ -1765,13 +1765,13 @@ article .highlight > div table tr td:last-of-type {
     overflow: auto;
 }
 
-.\[background\:url\(\.\/theme\.png\)_left_center\/_auto_theme\(\'spacing\.6\'\)_no-repeat\] {
-    background: url(./theme.png) left center/ auto 1.5rem no-repeat;
-}
+/*.\[background\:url\(\.\/theme\.png\)_left_center\/_auto_theme\(\'spacing\.6\'\)_no-repeat\] {*/
+/*    background: url(./theme.png) left center/ auto 1.5rem no-repeat;*/
+/*}*/
 
-.\[background\:url\(\.\/theme\.svg\)_left_center\/cover_no-repeat\] {
-    background: url(./theme.svg) left center/cover no-repeat;
-}
+/*.\[background\:url\(\.\/theme\.svg\)_left_center\/cover_no-repeat\] {*/
+/*    background: url(./theme.svg) left center/cover no-repeat;*/
+/*}*/
 
 .\[background\:var\(--url\)_center_center\/cover_no-repeat\] {
     background: var(--url) center center/cover no-repeat;

@@ -19,8 +19,8 @@
     <?php global $THEME_VERSION; ?>
     <?php wp_enqueue_style('style', get_stylesheet_uri(), array(), $THEME_VERSION, 'all'); ?>
     <?php wp_enqueue_style('paper',  get_template_directory_uri() . '/assets/css/paper.css', array(), $THEME_VERSION, 'all'); ?>
-    <?php is_single() ? wp_enqueue_style('atom-one-dark-reasonable',  get_template_directory_uri() . '/assets/css/atom-one-dark-reasonable.min.css', array(), $THEME_VERSION, 'all') : ''; ?>
-    <?php echo is_single() ? '<script src="' . get_template_directory_uri() . '/assets/js/highlight.min.js?ver=' . $THEME_VERSION . '" defer onload="hljs.highlightAll()"></script>' : '' ?>
+    <?php is_single() ? wp_enqueue_style('atom-one-dark-reasonable',  'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css', array(), $THEME_VERSION, 'all') : ''; ?>
+    <?php echo is_single() ? '<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer onload="hljs.highlightAll()"></script>' : '' ?>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script>
       tailwind.config = {
