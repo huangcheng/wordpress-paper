@@ -21,3 +21,9 @@ function get_primary_menu_items(): array
         return $menu->menu_item_parent == 0;
     });
 }
+
+function load_locales()
+{
+    load_theme_textdomain('paper', get_template_directory() . '/languages');
+}
+add_action('after_setup_theme', 'load_locales');
