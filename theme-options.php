@@ -7,38 +7,55 @@ function paper_customize_register($wp_customize)
         'priority' => 100,
     ));
 
-    $wp_customize->add_section('header_section', array(
-        'title' => __('Header'),
-        'priority' => 10,
+    $wp_customize->add_section('blog_section', array(
+        'title' => __('Blog'),
+        'priority' => 1,
         'panel' => 'theme_options',
     ));
 
-    $wp_customize->add_setting('avatar', array(
+    $wp_customize->add_setting('posts_per_page', array(
+        'default' => 5,
+    ));
+
+
+    $wp_customize->add_control('posts_per_page', array(
+        'label' => __('Posts Per Page'),
+        'section' => 'blog_section',
+        'type' => 'number',
+    ));
+
+    $wp_customize->add_section('header_section', array(
+        'title' => __('Header'),
+        'priority' => 2,
+        'panel' => 'theme_options',
+    ));
+
+    $wp_customize->add_setting('profile_image', array(
         'default' => '',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'avatar', array(
-        'label' => __('Avatar'),
+        'label' => __('Profile Image'),
         'section' => 'header_section',
-        'settings' => 'avatar',
+        'settings' => 'profile_image',
     )));
 
-    $wp_customize->add_setting('username', array(
+    $wp_customize->add_setting('profile_name', array(
         'default' => 'Cheng',
     ));
 
-    $wp_customize->add_control('username', array(
-        'label' => __('User Name'),
+    $wp_customize->add_control('profile_name', array(
+        'label' => __('Profile Name'),
         'section' => 'header_section',
         'type' => 'text',
     ));
 
-    $wp_customize->add_setting('bio', array(
+    $wp_customize->add_setting('profile_description', array(
         'default' => '',
     ));
 
-    $wp_customize->add_control('bio', array(
-        'label' => __('Bio'),
+    $wp_customize->add_control('profile_description', array(
+        'label' => __('Profile Image'),
         'section' => 'header_section',
         'type' => 'text',
     ));

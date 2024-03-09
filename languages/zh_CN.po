@@ -10,11 +10,17 @@ msgstr "主题选项"
 msgid "Header"
 msgstr "头部"
 
-msgid "User Name"
-msgstr "用户名"
+msgid "Profile Name"
+msgstr "个人名称"
 
-msgid "Avatar"
-msgstr "头像"
+msgid "Profile Image"
+msgstr "个人头像"
 
-msgid "Bio"
+msgid "Profile Description"
 msgstr "个人简介"
+
+msgid "Blog"
+msgstr "博客"
+
+msgid "Posts Per Page"
+msgstr "每页文章数"

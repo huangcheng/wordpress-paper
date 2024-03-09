@@ -10,11 +10,17 @@ msgstr "Theme Options"
 msgid "Header"
 msgstr "Header"
 
-msgid "User Name"
-msgstr "User Name"
+msgid "Profile Name"
+msgstr "Profile Name"
 
-msgid "Avatar"
-msgstr "Avatar"
+msgid "Profile Image"
+msgstr "Profile Image"
 
-msgid "Bio"
-msgstr "Bio"
+msgid "Profile Description"
+msgstr "Profile Description"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Posts Per Page"
+msgstr "Posts Per Page"

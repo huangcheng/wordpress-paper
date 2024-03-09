@@ -4,28 +4,30 @@
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-    $args = array('posts_per_page' => 5, 'paged' => $paged);
+    $posts_per_page = get_theme_mod('posts_per_page');
+
+    $args = array('posts_per_page' => $posts_per_page, 'paged' => $paged);
 
     $posts = get_posts($args);
 
-    $avatar = get_theme_mod('avatar');
+    $profile_image = get_theme_mod('profile_image');
 
-    $username = get_theme_mod('username');
+    $profile_name = get_theme_mod('profile_name');
 
-    $bio = get_theme_mod('bio');
+    $profile_description = get_theme_mod('profile_description');
     ?>
 
     <div class="-mt-2 mb-16 flex items-center">
-        <?php if ($avatar) : ?>
+        <?php if ($profile_image) : ?>
             <div class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow dark:bg-white/[15%]">
-                <img class="my-0 aspect-square w-16 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80" src="<?php echo $avatar; ?>" alt="<?php echo $username; ?>"/>
+                <img class="my-0 aspect-square w-16 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80" src="<?php echo $profile_image; ?>" alt="<?php echo $profile_name; ?>"/>
             </div>
         <?php endif; ?>
-        <?php if ($username) : ?>
+        <?php if ($profile_name) : ?>
             <div>
-                <h1 class="mb-2 mt-3 text-[1.6rem] font-bold"><?php echo $username; ?></h1>
+                <h1 class="mb-2 mt-3 text-[1.6rem] font-bold"><?php echo $profile_name; ?></h1>
                 <div class="break-words">
-                    <?php echo $bio ? $bio : "A personal blog by $username"; ?>
+                    <?php echo $profile_description ? $profile_description : "A personal blog by $profile_name"; ?>
                 </div>
             </div>
         <?php endif; ?>
