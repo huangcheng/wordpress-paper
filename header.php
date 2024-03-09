@@ -9,8 +9,8 @@
     <meta name="description" content="<?php echo get_bloginfo('description'); ?>" />
     <meta name="author" content="<?php echo get_bloginfo('author'); ?>" />
     <meta name="keywords" content="<?php echo get_bloginfo('keywords'); ?>" />
-    <?php global $theme_ver; ?>
-    <?php wp_enqueue_style( 'style', get_stylesheet_uri() ); ?>
+    <?php global $THEME_VERSION; ?>
+    <?php wp_enqueue_style( 'style', get_stylesheet_uri(), array(), $THEME_VERSION, 'all'); ?>
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <?php wp_head(); ?>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
@@ -133,11 +133,15 @@
             article .highlight > div table tr td:last-of-type {
                 @apply overflow-auto;
             }
+
+            .aspect-square {
+                aspect-ratio: 1/1
+            }
         }
     </style>
     <style>
         .btn-dark {
-            background: <?php echo 'url(' . get_template_directory_uri() . '/assets/images/theme.png?ver=' . $theme_ver .')' ?> 0 / auto 1.5rem no-repeat;
+            background: <?php echo 'url(' . get_template_directory_uri() . '/assets/images/theme.png?ver=' . $THEME_VERSION .')' ?> 0 / auto 1.5rem no-repeat;
         }
 
         :is(:where(.dark) .dark\:\[background-position\:right\]) {

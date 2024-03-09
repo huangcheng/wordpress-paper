@@ -3,3 +3,18 @@ msgstr "Prev Page"
 
 msgid "Next Page"
 msgstr "Next Page"
+
+msgid "Theme Options"
+msgstr "Theme Options"
+
+msgid "Header"
+msgstr "Header"
+
+msgid "User Name"
+msgstr "User Name"
+
+msgid "Avatar"
+msgstr "Avatar"
+
+msgid "Bio"
+msgstr "Bio"

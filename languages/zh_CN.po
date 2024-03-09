@@ -3,3 +3,18 @@ msgstr "上一页"
 
 msgid "Next Page"
 msgstr "下一页"
+
+msgid "Theme Options"
+msgstr "主题选项"
+
+msgid "Header"
+msgstr "头部"
+
+msgid "User Name"
+msgstr "用户名"
+
+msgid "Avatar"
+msgstr "头像"
+
+msgid "Bio"
+msgstr "个人简介"
