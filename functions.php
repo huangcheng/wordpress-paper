@@ -17,6 +17,10 @@ function get_primary_menu_items(): array
     $id = $locations[$menu_name];
     $menus = wp_get_nav_menu_items($id);
 
+    if (!is_array($menus) || empty($menus)) {
+        return [];
+    }
+
     return array_filter($menus, function ($menu) {
         return $menu->menu_item_parent == 0;
     });
