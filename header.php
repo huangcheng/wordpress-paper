@@ -68,7 +68,7 @@
 
         <?php $social_links = get_theme_mod('social_links') ?? []; ?>
 
-        <?php if (count($social_links) > 0) : ?>
+        <?php if (is_array($social_links) && count($social_links) > 0) : ?>
             <nav class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6">
                 <?php foreach ($social_links as $link) : ?>
                     <a
@@ -78,7 +78,7 @@
                         title="<?php echo $link['title']; ?>"
                     >
                     </a>
-                <? endforeach; ?>
+                <?php endforeach; ?>
             </nav>
         <?php endif; ?>
     </header>
