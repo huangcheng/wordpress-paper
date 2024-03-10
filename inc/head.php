@@ -18,7 +18,6 @@
     <meta name="keywords" content="<?php echo get_bloginfo('keywords'); ?>" />
     <?php global $THEME_VERSION; ?>
     <?php wp_enqueue_style('style', get_stylesheet_uri(), array(), $THEME_VERSION, 'all'); ?>
-    <?php wp_enqueue_style('paper', get_template_directory_uri() . '/assets/css/paper.css', array(), $THEME_VERSION, 'all'); ?>
     <?php is_single() ? wp_enqueue_style('atom-one-dark-reasonable',  'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark-reasonable.min.css', array(), $THEME_VERSION, 'all') : ''; ?>
     <?php wp_enqueue_style('font-awesome',  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css', array(), $THEME_VERSION, 'all'); ?>
     <?php echo is_single() ? '<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer onload="hljs.highlightAll()"></script>' : '' ?>
