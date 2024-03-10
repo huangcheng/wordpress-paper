@@ -1,5 +1,5 @@
 {
-  "name": "wordpress-paper",
+  "name": "wordpress-theme-paper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,16 @@
     "build:i18n": "for file in `find . -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done",
     "build:css": "postcss assets/css/style.css -o style.css",
     "build:archive": "rm ./dist.zip; zip -r9 ./dist.zip *.php assets/images/* languages/*.mo template-parts/* vendor/* style.css",
-    "build": "npm run build:css && npm run build:i18n && npm run build:archive",
+    "build": "npm run build:css &&  npm run build:archive",
     "stop": "wp-env stop"
   },
   "keywords": [],
-  "author": "Cheng Huang",
-  "license": "ISC",
+  "author": "HUANG Cheng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangcheng/wordpress-theme-paper"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.10",
