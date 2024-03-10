@@ -7,14 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wp-env start",
     "build:i18n": "for file in `find . -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done",
-    "build:archive": "zip -r9 ./dist.zip *.php assets/* languages/*.mo template-parts/* style.css",
-    "build": "npm run build:i18n && npm run build:archive",
+    "build:css": "postcss assets/css/style.css -o style.css",
+    "build:archive": "rm ./dist.zip; zip -r9 ./dist.zip *.php assets/images/* languages/*.mo template-parts/* vendor/* style.css",
+    "build": "npm run build:css && npm run build:i18n && npm run build:archive",
     "stop": "wp-env stop"
   },
   "keywords": [],
   "author": "Cheng Huang",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/env": "^9.5.0"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.10",
+    "@wordpress/env": "^9.5.0",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.1"
   }
 }

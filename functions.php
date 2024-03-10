@@ -1,7 +1,7 @@
 <?php
 
-require_once (get_template_directory() . '/constants.php');
-require_once(get_template_directory() . '/theme-options.php');
+require_once(__DIR__ . '/inc/constants.php');
+require_once(__DIR__ . '/theme-options.php');
 
 function register_menu()
 {
@@ -26,4 +26,5 @@ function load_locales()
 {
     load_theme_textdomain('paper', get_template_directory() . '/languages');
 }
+
 add_action('after_setup_theme', 'load_locales');

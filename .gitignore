@@ -3,3 +3,5 @@ node_modules
 pnpm-lock.yaml
 *.mo
 dist.zip
+style.css
+vendor

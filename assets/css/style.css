@@ -14,3 +14,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: paper
 This theme is licensed under the MIT.
 */
+
+@import "paper.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon {
+    font-family: 'Font Awesome 6 Brands';
+}

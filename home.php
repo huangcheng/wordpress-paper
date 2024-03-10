@@ -2,7 +2,7 @@
 
 <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert">
     <?php
-    require_once(get_template_directory() . '/utils.php');
+    require_once(__DIR__ . '/inc/utils.php');
 
     $query = get_query();
 
