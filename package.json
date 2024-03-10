@@ -8,7 +8,7 @@
     "start": "wp-env start",
     "build:i18n": "for file in `find . -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done",
     "build:css": "postcss assets/css/style.css -o style.css",
-    "build:archive": "rm ./dist.zip; zip -r9 ./dist.zip *.php assets/images/* languages/*.mo template-parts/* vendor/* style.css",
+    "build:archive": "rm ./theme.zip; zip -r9 ./theme.zip *.php assets/images/* languages/*.mo template-parts/* inc/* vendor/* style.css screenshot.png",
     "build": "npm run build:css &&  npm run build:archive",
     "stop": "wp-env stop"
   },
