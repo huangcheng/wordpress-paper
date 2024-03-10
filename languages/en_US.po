@@ -1,3 +1,12 @@
+# German translations for qgoda package.
+# Copyright (C) 2018 Guido Flohr <http://www.guido-flohr.net>
+# This file is distributed under the same license as the qgoda package.
+# Guido Flohr <guido.flohr@dontspam.me>, 2018.
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
 msgid "Prev Page"
 msgstr "Prev Page"
 

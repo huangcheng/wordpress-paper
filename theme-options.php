@@ -41,7 +41,7 @@ function paper_customize_register($wp_customize)
     )));
 
     $wp_customize->add_setting('profile_name', array(
-        'default' => 'Cheng',
+        'default' => '',
     ));
 
     $wp_customize->add_control('profile_name', array(

@@ -17,6 +17,8 @@
     $post_content = $post->post_content;
 
     $post_tags = get_the_tags($post->ID);
+
+    $featured_image = get_the_post_thumbnail_url($post->ID, 'full');
     ?>
     <article>
         <header class="mb-16">
@@ -27,6 +29,9 @@
                 <span><?php echo $post_author ?></span>
             </div>
         </header>
+        <?php if ($featured_image) : ?>
+            <img class="w-full aspect-video object-cover mb-8" src="<?php echo $featured_image ?>" alt="<?php echo $post_title ?>"/>
+        <?php endif; ?>
         <section><?php echo $post_content ?></section>
     </article>
 
