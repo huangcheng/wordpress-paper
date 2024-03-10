@@ -129,15 +129,8 @@ new Kirki\Field\Repeater(
                 'type' => 'text',
                 'default' => '',
             ],
-//            'color' => [
-//                'label' => esc_html__('Icon Color', $THEME_NAME),
-//                'description' => esc_html__('Set a unique color for your icon (optional)', $THEME_NAME),
-//                'type' => 'color',
-//                'default' => '',
-//            ],
             'new' => [
                 'label' => esc_html__('Open in New Tab', $THEME_NAME),
-                'description' => esc_html__('Check this box to open the link in a new tab', $THEME_NAME),
                 'type' => 'checkbox',
                 'default' => false,
             ],

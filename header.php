@@ -72,7 +72,7 @@
             <nav class="mt-12 flex justify-center space-x-10 dark:invert lg:ml-12 lg:mt-0 lg:items-center lg:space-x-6">
                 <?php foreach ($social_links as $link) : ?>
                     <a
-                        class="h-8 w-8 text-2xl/[1.5rem] lg:h-6 lg:w-6 icon <?php echo $link['icon'] ?>"
+                        class="h-8 w-8 text-2xl/[1.5rem] dark:invert lg:h-6 lg:w-6 icon <?php echo $link['icon'] ?>"
                         href="<?php echo $link['link']; ?>"
                         target="<?php echo $link['new'] ? '_blank' : '_self'; ?>"
                         title="<?php echo $link['title']; ?>"
